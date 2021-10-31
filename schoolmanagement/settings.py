@@ -43,8 +43,12 @@ INSTALLED_APPS = [
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',  # <-- And here
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',  # <-- And here
     ],
+}
+SIMPLE_JWT = {
+    'USER_ID_FIELD': 'school_id'
 }
 
 MIDDLEWARE = [
