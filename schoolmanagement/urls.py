@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from user import views
+# The DRF provide an endpoint for the users to request an authentication token using their username and password.
+from rest_framework.authtoken.views import obtain_auth_token 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/',views.HelloView.as_view(),name='hello'),
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 ]

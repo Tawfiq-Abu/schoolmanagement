@@ -1,0 +1,8 @@
+login details
+20656801
+a@a.com
+1234
+
+generating token for testing purposes
+python manage.py drf_create_token 20656801
+2db1a0f12bdf68ae7b43bb6497d1cf9111d9249f 
